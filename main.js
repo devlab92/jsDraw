@@ -8,6 +8,18 @@ document.addEventListener('DOMContentLoaded', () => {
 	canvas.width = 500
 	canvas.height = 400
 
+	// Recebe o valor do input color do html
+	let color = document.getElementById('penColor')
+	color.onchange = () => {
+		ctx.strokeStyle = color.value
+	}
+	// Recebe o valor do input range do html
+	let size = document.getElementById('penSize')
+	size.onchange = () => {
+		console.log(size.value)
+		ctx.lineWidth = size.value
+	}
+	
 	const pen = {
 		active: false,
 		moving: false,
@@ -52,3 +64,5 @@ document.addEventListener('DOMContentLoaded', () => {
 		ctx.stroke()
 	}
 })
+
+
