@@ -1,2 +1,2 @@
-# jsDraw
-board to draw
+# jsPong
+My first game created in JS.
